@@ -5,7 +5,8 @@ import (
 	"github.com/krlos/firstApi/models"
 )
 
-func Migrate() { // crea las tablas en la db
+// Migrate crea las tablas en la db
+func Migrate() {
 	db := config.GetConection()
 	defer db.Close()
 

@@ -10,7 +10,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-type Config struct {
+type config struct {
 	Server   string
 	Port     string
 	User     string
@@ -18,8 +18,8 @@ type Config struct {
 	Database string
 }
 
-func GetConfig() Config {
-	var config Config
+func getConfig() config {
+	var config config
 	file, err := os.Open("config.json")
 	if err != nil {
 		log.Fatal(err)
@@ -35,7 +35,7 @@ func GetConfig() Config {
 }
 
 func GetConection() *gorm.DB {
-	cnn := GetConfig()
+	cnn := getConfig()
 	dsn := fmt.Sprintf(
 		"%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=true&local",
 		cnn.User,

@@ -4,6 +4,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+// Comment del sistema
 type Comment struct {
 	gorm.Model
 	UserID   uint      `json:"userId"`
