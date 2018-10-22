@@ -1,8 +1,8 @@
 package migration
 
 import (
-	"github.com/krlos/firstApi/config"
-	"github.com/krlos/firstApi/models"
+	"github.com/krlos/firstApi/api/config"
+	"github.com/krlos/firstApi/api/models"
 )
 
 // Migrate crea las tablas en la db
