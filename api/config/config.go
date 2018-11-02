@@ -34,7 +34,8 @@ func getConfig() config {
 	return config
 }
 
-func GetConection() *gorm.DB {
+//GetConection obtiene la coneccion
+func GetConnection() *gorm.DB {
 	cnn := getConfig()
 	dsn := fmt.Sprintf(
 		"%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=true&local",
